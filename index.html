@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>Mi Salón - Experiencia Belleza</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px;
+    text-align:center;
+    z-index:10;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+    margin:0;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+.btn{
+    background:#c89b3c;
+    padding:14px 30px;
+    border-radius:5px;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+    margin-top:20px;
+}
+
+/* SECCIONES */
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+/* GALERIA */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:40px;
+    color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#galeria">Galería</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>VIVE LA EXPERIENCIA</h1>
+<p>Estilo • Belleza • Confianza</p>
+<a class="btn" href="#">Reservar Cita</a>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+<h2>Nuestros Servicios</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035">
+<h3>Corte Profesional</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388">
+<h3>Coloración & Balayage</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595475884562-073c30d45670">
+<h3>Extensiones</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250">
+<h3>Manicure & Beauty</h3>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="section">
+<h2>Una experiencia única</h2>
+<p>
+Un espacio diseñado para que te relajes y descubras tu mejor versión.
+Profesionales expertos y atención personalizada.
+</p>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="section">
+<h2>Trabajos Realizados</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+<img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+<h2>Contacto</h2>
+<p>Whatsapp: +56 9 0000 0000</p>
+<p>Santiago, Chile</p>
+<a class="btn" href="https://wa.me/">Agendar Ahora</a>
+</section>
+
+<footer>
+<p>© 2026 Mi Salón - GitHub Pages</p>
+</footer>
+
+</body>
+</html>
