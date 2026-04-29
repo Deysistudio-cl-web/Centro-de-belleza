@@ -1,0 +1,5 @@
+*.env
+*.py
+*.bat
+__pycache__/
+.git/

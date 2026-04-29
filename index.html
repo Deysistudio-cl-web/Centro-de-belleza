@@ -1,0 +1,771 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deysi Studio — Salón de Belleza Premium</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="img/logo_512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/logo_192x192.png">
+  <link rel="apple-touch-icon" href="img/logo_192x192.png">
+  <meta name="description" content="Deysi Studio — Especialistas en extensiones de cabello, balayage, coloración, peinados y maquillaje. Agenda tu cita.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Reviews carousel ── */
+    .rv-viewport { overflow: hidden; }
+    .rv-track-v {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: max-content;
+      animation: rv-scroll-h 30s linear infinite;
+    }
+    .rv-track-v:hover { animation-play-state: paused; }
+    @keyframes rv-scroll-h {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .rv-track-v .review-card { flex: 0 0 290px; width: 290px; }
+    @media (max-width: 768px) {
+      .reviews-intro-2col { grid-template-columns: 1fr !important; gap: 48px !important; }
+      .reviews-intro-2col > div:first-child { order: 2; }
+      .reviews-intro-2col > div:last-child  { order: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/56966033023" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Mobile Nav Overlay -->
+<div class="nav-mobile-overlay" id="nav-overlay" style="display:none;"></div>
+<nav class="nav-mobile" id="mobile-nav">
+  <button class="nav-mobile-close" id="nav-close" aria-label="Cerrar">&#215;</button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios/index.html">Servicios</a></li>
+    <li class="sub-menu">
+      <a href="servicios/evaluacion-online.html">— Evaluación Online Gratis</a>
+      <a href="servicios/brushing.html">— Brushing</a>
+      <a href="servicios/extensiones-cabello.html">— Extensiones de Cabello</a>
+      <a href="servicios/balayage-babylights.html">— Balayage &amp; Babylights</a>
+      <a href="servicios/coloracion.html">— Coloración</a>
+      <a href="servicios/corte-cabello.html">— Corte de Cabello</a>
+      <a href="servicios/masajes-capilares.html">— Masajes Capilares</a>
+      <a href="servicios/alisados-permanentes.html">— Alisados Permanentes</a>
+      <a href="servicios/peinados-maquillajes.html">— Peinados y Maquillajes</a>
+    </li>
+    <li><a href="promociones.html">Promociones</a></li>
+    <li><a href="portafolio.html">Portafolio</a></li>
+    <li><a href="nosotras.html">Nosotras</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="gift-card.html">Gift Card</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-brand-row">
+    <div class="header-socials">
+      <a href="https://www.instagram.com/deysistudio.cl" class="header-social-link header-social-ig" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" class="header-social-link header-social-fb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://wa.me/56966033023" class="header-social-link header-social-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <a href="index.html" class="header-social-link header-social-web" aria-label="Sitio web"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></a>
+    </div>
+    <div class="header-brand-center">
+      <a href="index.html" class="header-logo"><img src="img/logo_512x512.png" alt="Deysi Studio"></a>
+    </div>
+    <div class="header-brand-right">
+      <div class="header-search">
+        <input type="search" class="header-search-input" id="header-search-input" placeholder="Buscar servicios..." autocomplete="off">
+        <button type="button" class="header-search-btn" id="header-search-btn" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <div class="header-search-results" id="header-search-results"></div>
+      </div>
+      <a href="https://cal.com/deysi-studio" class="btn btn-primary btn-reservar" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </div>
+  <div class="header-nav-row">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="servicios/index.html">Servicios &#9660;<ul class="dropdown"><li><a href="servicios/evaluacion-online.html">Evaluación Online Gratis</a></li><li><a href="servicios/brushing.html">Brushing</a></li><li><a href="servicios/extensiones-cabello.html">Extensiones de Cabello</a></li><li><a href="servicios/balayage-babylights.html">Balayage &amp; Babylights</a></li><li><a href="servicios/coloracion.html">Coloración</a></li><li><a href="servicios/corte-cabello.html">Corte de Cabello</a></li><li><a href="servicios/masajes-capilares.html">Masajes Capilares</a></li><li><a href="servicios/alisados-permanentes.html">Alisados Permanentes</a></li><li><a href="servicios/peinados-maquillajes.html">Peinados y Maquillajes</a></li></ul></a></li>
+        <li><a href="promociones.html">Promociones</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="nosotras.html">Nosotras</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gift-card.html">Gift Card</a></li>
+        <li><a href="trabaja-con-nosotras.html">Trabaja con Nosotras</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO CAROUSEL CSS-only auto-play -->
+<section class="hero" aria-label="Portada">
+  <div class="carousel-track">
+    <div class="hero-slide">
+      <img src="img/hero-salon-fondo-w1920.jpg" alt="Salón Deysi Studio" loading="eager">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="eyebrow">Bienvenida al Studio</span>
+          <h1>Vive la Experiencia<br><em>Deysi Studio</em></h1>
+          <p>Transformamos tu imagen con los mejores especialistas en belleza</p>
+          <a href="https://cal.com/deysi-studio" class="btn btn-outline" target="_blank" rel="noopener">Agenda tu Cita</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="img/servicios-coloracion-balayage-w1920.jpg" alt="Extensiones y coloración" loading="lazy">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="eyebrow">Especialistas en Cabello</span>
+          <h1>Extensiones &amp;<br><em>Coloración Premium</em></h1>
+          <p>Las técnicas más modernas en un ambiente exclusivo</p>
+          <a href="servicios/extensiones-cabello.html" class="btn btn-outline">Conoce más</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="img/novia-peinado-maquillaje-w1920.jpg" alt="Novias y eventos" loading="lazy">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="eyebrow">Novias &amp; Eventos</span>
+          <h1>Tu Momento<br><em>Más Especial</em></h1>
+          <p>Peinados y maquillajes para bodas, fiestas y eventos especiales</p>
+          <a href="servicios/peinados-maquillajes.html" class="btn btn-outline">Ver Servicios</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span class="scroll-line"></span>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="nosotras">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <span class="eyebrow">Nuestra Historia</span>
+        <h2>Un Studio de Belleza con Alma y Pasión</h2>
+        <p>En Deysi Studio creemos que la belleza no solo transforma el aspecto, sino también la confianza y el bienestar de cada persona. Nuestro equipo viaja constantemente para traerte las últimas tendencias y los mejores productos del mundo.</p>
+        <p>Somos especialistas en extensiones de cabello natural, balayage y técnicas de coloración avanzada. Trabajamos con las marcas más reconocidas de la industria para garantizar resultados extraordinarios.</p>
+        <a href="nosotras.html" class="btn btn-primary" style="margin-top:28px;">Conocer más</a>
+      </div>
+      <div class="about-image fade-in">
+        <img src="img/studio-interior-salon-w800.jpg" alt="Interior Deysi Studio" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Lo que Hacemos</span>
+      <h2>Nuestros Servicios</h2>
+      <span class="section-divider"></span>
+      <p>Ofrecemos una experiencia de belleza completa con los tratamientos más modernos</p>
+    </div>
+    <div class="services-grid">
+      <a href="servicios/extensiones-cabello.html" class="service-card featured fade-in">
+        <img src="img/servicios-balayage-alisado-w900.jpg" alt="Extensiones de Cabello Natural" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Extensiones de Cabello Natural</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+      <a href="servicios/balayage-babylights.html" class="service-card fade-in">
+        <img src="img/servicios-coloracion-balayage-w600.jpg" alt="Balayage y Babylights" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Balayage &amp; Babylights</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+      <a href="servicios/coloracion.html" class="service-card fade-in">
+        <img src="img/servicios-coloracion-premium-w600.jpg" alt="Coloración Premium" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Coloración Premium</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+      <a href="servicios/brushing.html" class="service-card fade-in">
+        <img src="img/servicios-brushing-profesional-w600.jpg" alt="Brushing Profesional" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Brushing Profesional</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+      <a href="servicios/corte-cabello.html" class="service-card fade-in">
+        <img src="img/servicios-corte-cabello-w600.jpg" alt="Corte de Cabello" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Corte de Cabello</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+      <a href="servicios/alisados-permanentes.html" class="service-card fade-in">
+        <img src="img/servicios-alisado-permanente-w600.jpg" alt="Alisados Permanentes" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Alisados Permanentes</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+      <a href="servicios/peinados-maquillajes.html" class="service-card fade-in">
+        <img src="img/servicios-maquillaje-cejas-w600.jpg" alt="Peinados y Maquillajes" loading="lazy">
+        <div class="service-card-overlay">
+          <h3>Peinados &amp; Maquillajes</h3>
+          <span class="card-cta">Ver Servicio →</span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="fade-in">
+      <a href="servicios/index.html" class="btn btn-primary">Ver Todos los Servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND / EXTENSIONS -->
+<section class="brand-section">
+  <div class="container">
+    <div class="brand-section-inner">
+      <img src="img/servicios-extensiones-cabello-w800.jpg" alt="Extensiones de cabello natural" loading="lazy" class="fade-in">
+      <div class="brand-text fade-in">
+        <span class="eyebrow">Representantes Oficiales</span>
+        <h2>Extensiones de Cabello 100% Naturales</h2>
+        <p>Somos distribuidoras de las mejores marcas de extensiones de cabello natural. Calidad garantizada y resultados que hablan por sí solos.</p>
+        <p>Desde mechones individuales hasta extensiones completas, nuestras especialistas te darán el volumen y largo que siempre soñaste.</p>
+        <a href="servicios/extensiones-cabello.html" class="btn btn-gold" style="margin-top:24px;">Conocer Más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOVIAS Y FIESTAS -->
+<section class="events-section" id="novias">
+  <div class="events-image">
+    <img src="img/novia-peinado-maquillaje-w900.jpg" alt="Peinados para novias y fiestas" loading="lazy">
+  </div>
+  <div class="events-content">
+    <div class="fade-in">
+      <span class="eyebrow">Bodas &amp; Eventos</span>
+      <h2>Peinados y Maquillajes para tu Gran Día</h2>
+      <p>Tu boda, fiesta de 15 años o evento especial merece el toque perfecto. Nuestras especialistas te acompañarán desde los ensayos hasta el gran momento.</p>
+      <p>Contamos con paquetes especiales para novias, madrinas y grupos de amigas.</p>
+      <a href="servicios/peinados-maquillajes.html" class="btn btn-primary">Ver Paquetes</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO PREVIEW -->
+<section class="portfolio" id="portafolio">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Nuestros Trabajos</span>
+      <h2>Portafolio</h2>
+      <span class="section-divider"></span>
+      <p>Cada trabajo es una obra de arte. Conoce algunos de nuestros resultados más recientes.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" style="grid-row:span 2;">
+        <img src="img/servicios-balayage-alisado-w600.jpg" alt="Balayage" style="height:100%;min-height:566px;" loading="lazy">
+        <div class="portfolio-item-overlay"><span>Balayage</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/servicios-coloracion-balayage-w600.jpg" alt="Extensiones" loading="lazy">
+        <div class="portfolio-item-overlay"><span>Extensiones</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/servicios-brushing-profesional-w600.jpg" alt="Brushing" loading="lazy">
+        <div class="portfolio-item-overlay"><span>Brushing</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/servicios-maquillaje-cejas-w600.jpg" alt="Maquillaje" loading="lazy">
+        <div class="portfolio-item-overlay"><span>Maquillaje</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/servicios-manicure-resultado-w600.jpg" alt="Manicure" loading="lazy">
+        <div class="portfolio-item-overlay"><span>Manicure</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="fade-in">
+      <a href="portafolio.html" class="btn btn-primary">Ver Portafolio Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section class="differentiators">
+  <div class="container">
+    <div class="diff-grid diff-grid-3">
+      <div class="diff-item fade-in">
+        <span class="diff-icon">&#128187;</span>
+        <h3>WiFi + Zona Cowork</h3>
+        <p>Conéctate mientras te cuidas. WiFi gratuito y espacio cómodo de trabajo durante tu cita</p>
+      </div>
+      <div class="diff-item fade-in">
+        <span class="diff-icon">&#128663;</span>
+        <h3>Estacionamiento</h3>
+        <p>Fácil acceso con estacionamiento disponible en el sector para mayor comodidad</p>
+      </div>
+      <div class="diff-item fade-in">
+        <span class="diff-icon">&#10024;</span>
+        <h3>Atención Personalizada</h3>
+        <p>Cada clienta recibe atención individual. Tu cabello y tus gustos son únicos, y así te tratamos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="fade-in reviews-intro-2col" style="display:grid;grid-template-columns:minmax(294px, 1fr) 2fr;gap:64px;align-items:center;margin-bottom:64px;">
+
+      <!-- Foto apilada estilo Google Maps -->
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <div style="position:relative;width:100%;max-width:294px;margin-bottom:8px;">
+          <img src="img/maps-google-reviews.jpeg" alt="Deysi Studio en Google Maps"
+               style="width:100%;height:auto;display:block;border-radius:24px;box-shadow:0 20px 56px rgba(0,0,0,0.22);">
+          <img src="img/maps-google-reviews.jpeg" alt="Deysi Studio Google"
+               style="position:absolute;bottom:-36px;left:-46px;width:44%;height:auto;display:block;border-radius:14px;border:3px solid #1a1a1a;box-shadow:0 6px 22px rgba(0,0,0,0.3);">
+        </div>
+        <div style="margin-top:56px;font-size:1.7rem;color:#f59e0b;letter-spacing:4px;line-height:1;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="margin:6px 0 0;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(0,0,0,0.45);font-family:var(--font-sans);">5.0 &nbsp;·&nbsp; Google Reviews</p>
+      </div>
+
+      <!-- Texto + carrusel -->
+      <div style="display:flex;flex-direction:column;align-self:start;padding-top:8px;">
+        <span class="eyebrow">Reseñas verificadas</span>
+        <h2 style="margin-bottom:16px;">Lo que dicen nuestras clientas</h2>
+        <span class="section-divider"></span>
+        <div class="reviews-google-badge" style="margin-top:24px;align-self:flex-start;width:fit-content;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
+          <span class="reviews-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="reviews-badge-text">Google Reviews</span>
+        </div>
+        <!-- Carrusel vertical -->
+        <div class="rv-viewport" style="flex:1;margin-top:24px;overflow:hidden;">
+          <div class="rv-track-v">
+
+        <!-- ── Tarjetas originales ── -->
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">N</div><div class="review-meta"><div class="review-name">Nathalie Chavarri</div><div class="review-time">Hace un a&ntilde;o</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Excelente atenci&oacute;n muy personalizada me encant&oacute;"</p><span class="review-service">Corte de pelo</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--dark">N</div><div class="review-meta"><div class="review-name">Nicole Adarve</div><div class="review-time">Hace 4 horas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Encantada con resultado"</p><span class="review-service">Champ&uacute;, acondicionador y lavado</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">D</div><div class="review-meta"><div class="review-name">Daniela Palma</div><div class="review-time">Hace 4 horas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Maravilloso excelente servicio"</p><span class="review-service">Estilismo capilar</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--dark">C</div><div class="review-meta"><div class="review-name">Carola Nu&ntilde;ez</div><div class="review-time">Hace una semana</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Una buena experiencia, relajada, concentrada en el corte de pelo, puntual"</p><span class="review-service">Corte de pelo</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">M</div><div class="review-meta"><div class="review-name">Melanny Caroca</div><div class="review-time">Hace una semana</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Muy buena atenci&oacute;n"</p><span class="review-service">Balayage</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--dark">P</div><div class="review-meta"><div class="review-name">Paola Valdebenito</div><div class="review-time">Hace 2 semanas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Excelente atenci&oacute;n, buena ubicaci&oacute;n con estacionamiento, hermosos trabajos, mucha preocupaci&oacute;n y detallista 🥰"</p><span class="review-service"></span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">C</div><div class="review-meta"><div class="review-name">Carlos Guerra</div><div class="review-time">Hace 2 semanas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Muy buen servicio 👌"</p><span class="review-service"></span></div>
+
+        <!-- ── Duplicado para loop infinito ── -->
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">N</div><div class="review-meta"><div class="review-name">Nathalie Chavarri</div><div class="review-time">Hace un a&ntilde;o</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Excelente atenci&oacute;n muy personalizada me encant&oacute;"</p><span class="review-service">Corte de pelo</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--dark">N</div><div class="review-meta"><div class="review-name">Nicole Adarve</div><div class="review-time">Hace 4 horas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Encantada con resultado"</p><span class="review-service">Champ&uacute;, acondicionador y lavado</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">D</div><div class="review-meta"><div class="review-name">Daniela Palma</div><div class="review-time">Hace 4 horas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Maravilloso excelente servicio"</p><span class="review-service">Estilismo capilar</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--dark">C</div><div class="review-meta"><div class="review-name">Carola Nu&ntilde;ez</div><div class="review-time">Hace una semana</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Una buena experiencia, relajada, concentrada en el corte de pelo, puntual"</p><span class="review-service">Corte de pelo</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">M</div><div class="review-meta"><div class="review-name">Melanny Caroca</div><div class="review-time">Hace una semana</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Muy buena atenci&oacute;n"</p><span class="review-service">Balayage</span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--dark">P</div><div class="review-meta"><div class="review-name">Paola Valdebenito</div><div class="review-time">Hace 2 semanas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Excelente atenci&oacute;n, buena ubicaci&oacute;n con estacionamiento, hermosos trabajos, mucha preocupaci&oacute;n y detallista 🥰"</p><span class="review-service"></span></div>
+
+        <div class="review-card"><div class="review-card-header"><div class="review-avatar review-avatar--gold">C</div><div class="review-meta"><div class="review-name">Carlos Guerra</div><div class="review-time">Hace 2 semanas</div></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="review-g-icon" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="review-text">"Muy buen servicio 👌"</p><span class="review-service"></span></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="reviews-cta fade-in" style="margin-top:-24px;">
+      <a href="https://search.google.com/local/writereview?placeid=ChIJn1nFPX9DY5YRytsG0QgqYNg&source=g.page.m._&laa=merchant-review-solicitation" class="btn-google-review" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+        Comparte tu experiencia
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section class="blog-preview">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Últimas Publicaciones</span>
+      <h2>Desde el Blog</h2>
+      <span class="section-divider"></span>
+    </div>
+    <div class="blog-grid fade-in">
+      <a href="blog.html" class="blog-card">
+        <img src="img/novia-peinado-maquillaje-w600.jpg" alt="Regalo Día de la Madre" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-meta">Gift Card · Abril 2026</div>
+          <h3>El Mejor Regalo para Mamá</h3>
+          <p>Una experiencia de belleza en Deysi Studio es la ocasión perfecta para celebrar a esa persona que siempre está para todos.</p>
+          <span class="blog-card-read">Leer más →</span>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <img src="img/servicios-brushing-profesional-w600.jpg" alt="Qué regalar a una mujer" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-meta">Regalos · Abril 2026</div>
+          <h3>¿Qué Regalar a una Mujer?</h3>
+          <p>Elegir el regalo perfecto puede parecer un desafío, pero hay algo que nunca falla: regalar una experiencia que la haga sentir especial.</p>
+          <span class="blog-card-read">Leer más →</span>
+        </div>
+      </a>
+      <a href="gift-card.html" class="blog-card">
+        <img src="img/servicios-coloracion-premium-w600.jpg" alt="Gift Card Deysi Studio" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-meta">Gift Card · Abril 2026</div>
+          <h3>Gift Card Deysi Studio</h3>
+          <p>El Día de la Madre es la oportunidad ideal para sorprender con un detalle significativo. Una Gift Card de belleza es el regalo perfecto.</p>
+          <span class="blog-card-read">Ver Gift Cards →</span>
+        </div>
+      </a>
+    </div>
+    <div class="blog-preview-footer fade-in">
+      <a href="blog.html" class="btn btn-primary">Ver Todos los Artículos</a>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT CARDS -->
+<section class="gc-store-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">El regalo perfecto</span>
+      <h2>Gift Cards</h2>
+      <span class="section-divider"></span>
+      <p>Regala una experiencia de belleza única. Válidas para cualquier servicio del studio.</p>
+    </div>
+
+    <div class="gc-store-grid fade-in">
+
+      <div class="gc-item">
+        <a href="gift-card-20000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-corte-cabello-w600.jpg" alt="Gift Card $20.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$20.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-home-20000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$20.000</div>
+          <a href="gift-card-20000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <div class="gc-item">
+        <a href="gift-card-50000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-coloracion-premium-w600.jpg" alt="Gift Card $50.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$50.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-home-50000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$50.000</div>
+          <a href="gift-card-50000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <div class="gc-item">
+        <a href="gift-card-100000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-balayage-alisado-w600.jpg" alt="Gift Card $100.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$100.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-home-100000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$100.000</div>
+          <a href="gift-card-100000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <div class="gc-item">
+        <a href="gift-card-200000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/novia-peinado-maquillaje-w600.jpg" alt="Gift Card $200.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$200.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-home-200000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$190.000</div>
+          <div class="gc-item-original">$200.000</div>
+          <a href="gift-card-200000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="fade-in">
+      <a href="gift-card.html" class="btn btn-primary">Ver Todas las Gift Cards</a>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUITMENT -->
+<section class="recruitment">
+  <div class="recruitment-inner">
+    <div class="recruitment-image fade-in">
+      <img src="img/studio-interior-salon-w800.jpg" alt="Trabaja en Deysi Studio" loading="lazy">
+    </div>
+    <div class="recruitment-content fade-in">
+      <span class="eyebrow" style="color:var(--gold);">Únete al Equipo</span>
+      <h2>Trabaja con Nosotras</h2>
+      <p>¿Quieres ser parte de Deysi Studio? Estamos en búsqueda de nuevos talentos profesionales apasionados por la belleza para ser parte de nuestro equipo.</p>
+      <p style="margin-top:14px;color:rgba(255,255,255,0.6);font-size:0.9rem;">Estamos en busca de:</p>
+      <ul class="positions-list">
+        <li>Estilista</li>
+        <li>Colorista</li>
+        <li>Manicurista</li>
+        <li>Lashista</li>
+        <li>Ayudante de peluquería</li>
+        <li>Estilista integral</li>
+      </ul>
+      <a href="trabaja-con-nosotras.html" class="btn btn-gold">Postular Ahora</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + MAP -->
+<section class="contact-section" id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <span class="eyebrow">Encuéntranos</span>
+        <h2>Visítanos</h2>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#128205;</div>
+          <div class="contact-item-text">
+            <strong>Dirección</strong>
+            <span>Av. Alberto Einstein 719, Rancagua</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#128222;</div>
+          <div class="contact-item-text">
+            <strong>Teléfono / WhatsApp</strong>
+            <a href="https://wa.me/56966033023">+56 9 6603 3023</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#9993;</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:deysistudio.cl.web@gmail.com">deysistudio.cl.web@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#128336;</div>
+          <div class="contact-item-text">
+            <strong>Horario de Atención</strong>
+            <span>Lunes a Sábado: 9:00 – 19:00<br>Domingos: Cerrado<br><em>Previa cita únicamente</em></span>
+          </div>
+        </div>
+        <div style="margin-top:28px;">
+          <a href="https://cal.com/deysi-studio" class="btn btn-primary" target="_blank" rel="noopener" style="margin-right:12px;">Agendar Online</a>
+          <a href="https://wa.me/56966033023" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="map-container fade-in">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300!2d-70.7238666!3d-34.1805853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663437f3dc5599f%3A0xd8602a08d106dbca!2sDeysistudio.cl!5e0!3m2!1ses!2scl!4v1714000000000!5m2!1ses!2scl"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación Deysi Studio">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- ============== CIERRE CON LOGO + TEXTO + REDES ============== -->
+<section style="padding:80px 0 72px;background:var(--cream);text-align:center;">
+  <div class="container">
+    <a href="index.html" style="display:block;text-align:center;">
+      <img src="img/logo_512x512.png" alt="Deysi Studio" style="width:300px;height:auto;object-fit:contain;display:block;margin:0 auto 28px;">
+    </a>
+    <p style="max-width:860px;margin:0 auto 32px;font-family:var(--font-serif);font-size:clamp(1rem,1.8vw,1.2rem);font-style:italic;font-weight:300;color:rgba(0,0,0,0.7);line-height:1.8;">
+      Somos un Sal&oacute;n de Belleza con amplia trayectoria y a&ntilde;os de experiencia. Contamos con lo &uacute;ltimo en vanguardia para que te veas y te sientas regia, logrando acaparar todas las miradas. Somos expertas en Coloraci&oacute;n, Balayage y Extensiones de Cabello Natural.
+    </p>
+    <div style="display:flex;justify-content:center;gap:18px;">
+      <a href="https://www.instagram.com/deysistudio.cl" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://wa.me/56966033023" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="https://cal.com/deysi-studio" target="_blank" rel="noopener" aria-label="Reservar cita" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo-dark-w512.png" alt="Deysi Studio">
+        <p>Studio de belleza premium especializado en extensiones de cabello, coloración, peinados y más. Tu transformación es nuestra pasión.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/deysistudio.cl" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TT</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios/index.html">Servicios</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="nosotras.html">Nosotras</a></li>
+          <li><a href="trabaja-con-nosotras.html">Trabaja con Nosotras</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="servicios/extensiones-cabello.html">Extensiones</a></li>
+          <li><a href="servicios/balayage-babylights.html">Balayage</a></li>
+          <li><a href="servicios/coloracion.html">Coloración</a></li>
+          <li><a href="servicios/brushing.html">Brushing</a></li>
+          <li><a href="servicios/peinados-maquillajes.html">Novias</a></li>
+          <li><a href="servicios/index.html">Ver todos →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contacto</h4>
+        <p>&#128205; Av. Alberto Einstein 719 · Rancagua</p>
+        <p>&#128222; <a href="https://wa.me/56966033023" style="color:rgba(255,255,255,0.55)">+56 9 6603 3023</a></p>
+        <p>&#9993; <a href="mailto:deysistudio.cl.web@gmail.com" style="color:rgba(255,255,255,0.55)">deysistudio.cl.web@gmail.com</a></p>
+        <p style="margin-top:10px;">&#128336; Lun – Sáb &nbsp;·&nbsp; 9:00 – 19:00 hrs</p>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:2px;">Previa cita &nbsp;·&nbsp; Domingos cerrado</p>
+        <p style="margin-top:16px;">
+          <a href="https://cal.com/deysi-studio" class="btn btn-gold" style="font-size:0.72rem;padding:10px 18px;" target="_blank" rel="noopener">Reservar Cita</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Deysi Studio. Todos los derechos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+        <a href="#">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PROMO POPUP -->
+<div class="promo-overlay" id="promo-overlay" role="dialog" aria-modal="true" aria-label="Oferta de bienvenida">
+  <div class="promo-modal">
+    <button class="promo-close" onclick="closePromo()" aria-label="Cerrar">&#215;</button>
+    <div class="promo-logo-wrap">
+      <img src="img/logo_512x512.png" alt="Deysi Studio">
+    </div>
+    <h2>¡10% OFF en tu primera visita!</h2>
+    <p>Nuevas clientas obtienen un 10% de descuento en su primera cita de lunes a miércoles.<br>¡Aprovecha este beneficio exclusivo!</p>
+    <a href="https://cal.com/deysi-studio" class="btn-promo" target="_blank" rel="noopener" onclick="closePromo()">Reservar Ahora</a>
+    <p class="promo-tagline">Vive la experiencia Deysi Studio</p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var url = 'https://deysistudio-cl-web.github.io/Centro-de-belleza/servicios/index.html';
+  ['qr-home-20000','qr-home-50000','qr-home-100000','qr-home-200000'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    new QRCode(el, { text: url, width: 128, height: 128, colorDark: '#1a1a1a', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
+  });
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Card — Deysi Studio</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="img/logo_512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/logo_192x192.png">
+  <link rel="apple-touch-icon" href="img/logo_192x192.png">
+  <meta name="description" content="Regala una experiencia de belleza con las Gift Cards de Deysi Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="https://wa.me/56966033023" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="nav-mobile-overlay" id="nav-overlay" style="display:none;"></div>
+<nav class="nav-mobile" id="mobile-nav">
+  <button class="nav-mobile-close" id="nav-close" aria-label="Cerrar">&#215;</button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios/index.html">Servicios</a></li>
+    <li><a href="gift-card.html">Gift Card</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<header class="header" id="header">
+  <div class="header-brand-row">
+    <div class="header-socials">
+      <a href="https://www.instagram.com/deysistudio.cl" class="header-social-link header-social-ig" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" class="header-social-link header-social-fb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://wa.me/56966033023" class="header-social-link header-social-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <a href="index.html" class="header-social-link header-social-web" aria-label="Sitio web"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></a>
+    </div>
+    <div class="header-brand-center">
+      <a href="index.html" class="header-logo"><img src="img/logo_512x512.png" alt="Deysi Studio"></a>
+    </div>
+    <div class="header-brand-right">
+      <div class="header-search">
+        <input type="search" class="header-search-input" id="header-search-input" placeholder="Buscar servicios..." autocomplete="off">
+        <button type="button" class="header-search-btn" id="header-search-btn" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <div class="header-search-results" id="header-search-results"></div>
+      </div>
+      <a href="https://cal.com/deysi-studio" class="btn btn-primary btn-reservar" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </div>
+  <div class="header-nav-row">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios/index.html">Servicios &#9660;<ul class="dropdown"><li><a href="servicios/extensiones-cabello.html">Extensiones</a></li><li><a href="servicios/balayage-babylights.html">Balayage</a></li><li><a href="servicios/index.html">Ver todos →</a></li></ul></a></li>
+        <li><a href="promociones.html">Promociones</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="nosotras.html">Nosotras</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gift-card.html" class="active">Gift Card</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Men&uacute;"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-hero" style="background:var(--black);">
+  <div class="container" style="text-align:center;">
+    <span class="eyebrow" style="color:var(--gold);">El Regalo Perfecto</span>
+    <h1 style="color:white;font-style:italic;font-weight:300;">Gift Cards<br><em>Deysi Studio</em></h1>
+    <p style="color:rgba(255,255,255,0.65);max-width:480px;margin:20px auto 0;">Regala una experiencia de belleza &uacute;nica. V&aacute;lidas para cualquier servicio del studio.</p>
+  </div>
+</div>
+
+<section class="gc-store-section">
+  <div class="container">
+
+    <div class="gc-store-grid">
+
+      <!-- $20.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-20000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-corte-cabello-w600.jpg" alt="Gift Card $20.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$20.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-20000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$20.000</div>
+          <a href="gift-card-20000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $30.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-30000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-brushing-profesional-w600.jpg" alt="Gift Card $30.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$30.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-30000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$30.000</div>
+          <a href="gift-card-30000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $50.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-50000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-coloracion-premium-w600.jpg" alt="Gift Card $50.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$50.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-50000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$50.000</div>
+          <a href="gift-card-50000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $75.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-75000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-balayage-alisado-w600.jpg" alt="Gift Card $75.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$75.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-75000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$75.000</div>
+          <a href="gift-card-75000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $100.000 → $95.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-100000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-extensiones-cabello-w600.jpg" alt="Gift Card $100.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$100.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-100000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$95.000</div>
+          <div class="gc-item-original">$100.000</div>
+          <a href="gift-card-100000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $150.000 → $145.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-150000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/novia-peinado-maquillaje-w600.jpg" alt="Gift Card $150.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$150.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-150000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$145.000</div>
+          <div class="gc-item-original">$150.000</div>
+          <a href="gift-card-150000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $200.000 → $190.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-200000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-coloracion-balayage-w600.jpg" alt="Gift Card $200.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$200.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-200000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$190.000</div>
+          <div class="gc-item-original">$200.000</div>
+          <a href="gift-card-200000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+      <!-- $250.000 → $240.000 -->
+      <div class="gc-item fade-in">
+        <a href="gift-card-250000.html" class="gc-item-card-link">
+          <div class="gc-visual">
+            <div class="gc-photo-half"><img src="img/servicios-alisado-permanente-w600.jpg" alt="Gift Card $250.000" loading="lazy"></div>
+            <div class="gc-dark-half">
+              <img src="img/logo_512x512.png" alt="Deysi Studio" class="gc-logo-top">
+              <div class="gc-title-block"><span class="gc-title-gift">Gift</span><span class="gc-title-card">Card</span></div>
+              <div class="gc-amount">$250.000</div>
+              <div class="gc-validity-block">
+                <div class="gc-validity-badge">V&Aacute;LIDO 12 MESES</div>
+                <div class="gc-service">EN SERVICIO A ELECCI&Oacute;N</div>
+              </div>
+              <div class="gc-bottom">
+                <div class="gc-qr-box" id="qr-listing-250000"></div>
+                <div class="gc-website">Deysi Studio</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="gc-item-info">
+          <div class="gc-item-name">Gift Card</div>
+          <div class="gc-item-price">$240.000</div>
+          <div class="gc-item-original">$250.000</div>
+          <a href="gift-card-250000.html" class="btn btn-outline-dark gc-item-btn">Detalles</a>
+        </div>
+      </div>
+
+    </div><!-- end gc-store-grid -->
+
+    <div style="background:var(--cream);padding:52px;text-align:center;margin-top:60px;" class="fade-in">
+      <span class="eyebrow">V&aacute;lida para todos los servicios</span>
+      <h3 style="color:var(--black);margin:12px 0 10px;">12 meses de vigencia &middot; Entrega digital inmediata</h3>
+      <p style="max-width:520px;margin:0 auto;">Env&iacute;ala por WhatsApp o email. Perfecta para cumplea&ntilde;os, aniversarios o cualquier ocasi&oacute;n especial.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== CIERRE CON LOGO + TEXTO + REDES ============== -->
+<section style="padding:80px 0 72px;background:var(--cream);text-align:center;">
+  <div class="container">
+    <a href="index.html" style="display:block;text-align:center;">
+      <img src="img/logo_512x512.png" alt="Deysi Studio" style="width:300px;height:auto;object-fit:contain;display:block;margin:0 auto 28px;">
+    </a>
+    <p style="max-width:860px;margin:0 auto 32px;font-family:var(--font-serif);font-size:clamp(1rem,1.8vw,1.2rem);font-style:italic;font-weight:300;color:rgba(0,0,0,0.7);line-height:1.8;">
+      Somos un Sal&oacute;n de Belleza con amplia trayectoria y a&ntilde;os de experiencia. Contamos con lo &uacute;ltimo en vanguardia para que te veas y te sientas regia, logrando acaparar todas las miradas. Somos expertas en Coloraci&oacute;n, Balayage y Extensiones de Cabello Natural.
+    </p>
+    <div style="display:flex;justify-content:center;gap:18px;">
+      <a href="https://www.instagram.com/deysistudio.cl" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://wa.me/56966033023" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="https://cal.com/deysi-studio" target="_blank" rel="noopener" aria-label="Reservar cita" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="img/logo-dark-w512.png" alt="Deysi Studio"><p>Studio de belleza premium.</p><div class="footer-social"><a href="https://www.instagram.com/deysistudio.cl" aria-label="Instagram" target="_blank" rel="noopener">IG</a><a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener">FB</a><a href="#" aria-label="TT">TT</a></div></div>
+      <div class="footer-col"><h4>Navegaci&oacute;n</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios/index.html">Servicios</a></li><li><a href="gift-card.html">Gift Card</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="servicios/extensiones-cabello.html">Extensiones</a></li><li><a href="servicios/balayage-babylights.html">Balayage</a></li><li><a href="servicios/index.html">Ver todos &rarr;</a></li></ul></div>
+      <div class="footer-col footer-contact"><h4>Contacto</h4><p>&#128205; Av. Alberto Einstein 719 &middot; Rancagua</p><p>&#128222; <a href="https://wa.me/56966033023" style="color:rgba(255,255,255,0.55)">+56 9 6603 3023</a></p><p style="margin-top:10px;">&#128336; Lun &ndash; S&aacute;b &nbsp;&middot;&nbsp; 9:00 &ndash; 19:00 hrs</p><p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:2px;">Previa cita &nbsp;&middot;&nbsp; Domingos cerrado</p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Deysi Studio.</p><div class="footer-bottom-links"><a href="#">Privacidad</a></div></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var url = 'https://deysistudio-cl-web.github.io/Centro-de-belleza/servicios/index.html';
+  var ids = ['qr-listing-20000','qr-listing-30000','qr-listing-50000','qr-listing-75000','qr-listing-100000','qr-listing-150000','qr-listing-200000','qr-listing-250000'];
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    new QRCode(el, { text: url, width: 128, height: 128, colorDark: '#1a1a1a', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
+  });
+}());
+</script>
+</body>
+</html>
