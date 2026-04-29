@@ -18,8 +18,8 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 130px; overflow-x: hidden; max-width: 100%; }
-body { font-family: var(--font-sans); color: var(--text-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; max-width: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; overflow-x: hidden; max-width: 100%; overscroll-behavior-x: none; }
+body { font-family: var(--font-sans); color: var(--text-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; max-width: 100%; overscroll-behavior-x: none; }
 
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); font-weight: 400; line-height: 1.2; }
 h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); }
@@ -215,11 +215,12 @@ img { max-width: 100%; height: auto; display: block; }
 /* =========================================
    HERO (CSS auto-carousel)
 ========================================= */
-.hero { position: relative; margin-top: 168px; height: calc(100vh - 168px); min-height: 432px; overflow: hidden; background: #111; }
+.hero { position: relative; margin-top: 168px; height: calc(100vh - 168px); min-height: 432px; overflow: hidden; background: #111; touch-action: pan-y; }
 
 .carousel-track {
   display: flex; width: 300%; height: 100%;
   animation: hero-slide 15s infinite ease-in-out;
+  touch-action: pan-y;
 }
 .hero.js-carousel .carousel-track { animation: none; transition: transform 0.65s ease; }
 @keyframes hero-slide {
