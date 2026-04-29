@@ -55,9 +55,9 @@ git commit -m "Actualización sitio web - $TIMESTAMP"
 
 # Push
 echo "Subiendo cambios a GitHub..."
-if git push origin main 2>&1; then
+if git push --force -u origin main; then
   echo "Listo. Cambios subidos correctamente."
 else
-  # Si la rama remota no existe aún, forzar primer push
-  git push -u origin main
+  echo "ERROR: No se pudo subir. Revisa tu conexión o credenciales."
+  exit 1
 fi
