@@ -33,7 +33,7 @@ git config user.email "$GH_USER"
 git config user.name "Deysi Studio"
 
 # Configurar remote con credenciales
-REMOTE_WITH_CREDS="https://${GH_USER}:${GH_PASS}@github.com/Deysistudio-cl-web/Centro-de-belleza.git"
+REMOTE_WITH_CREDS="https://oauth2:${GH_PASS}@github.com/Deysistudio-cl-web/Centro-de-belleza.git"
 if git remote get-url origin &>/dev/null; then
   git remote set-url origin "$REMOTE_WITH_CREDS"
 else
