@@ -32,6 +32,8 @@
       .reviews-intro-2col { grid-template-columns: 1fr !important; gap: 48px !important; }
       .reviews-intro-2col > div:first-child { order: 2; }
       .reviews-intro-2col > div:last-child  { order: 1; }
+      .maps-float { display: none !important; }
+      .maps-stars { margin-top: 16px !important; }
     }
   </style>
 </head>
@@ -358,10 +360,10 @@
         <div style="position:relative;margin-left:50px;margin-bottom:8px;">
           <img src="img/maps-google-reviews.jpeg" alt="Deysi Studio en Google Maps"
                style="width:380px;height:525px;object-fit:cover;object-position:top;border-radius:20px;box-shadow:0 20px 56px rgba(0,0,0,0.22);display:block;">
-          <img src="img/maps-google-reviews.jpeg" alt="Deysi Studio Google"
+          <img class="maps-float" src="img/maps-google-reviews.jpeg" alt="Deysi Studio Google"
                style="position:absolute;bottom:-30px;left:-45px;width:135px;height:186px;object-fit:cover;object-position:top;border-radius:10px;border:3px solid #1a1a1a;box-shadow:0 6px 22px rgba(0,0,0,0.3);">
         </div>
-        <div style="margin-top:48px;font-size:1.7rem;color:#f59e0b;letter-spacing:4px;line-height:1;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="maps-stars" style="margin-top:48px;font-size:1.7rem;color:#f59e0b;letter-spacing:4px;line-height:1;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p style="margin:6px 0 0;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(0,0,0,0.45);font-family:var(--font-sans);">5.0 &nbsp;·&nbsp; Google Reviews</p>
       </div>
 

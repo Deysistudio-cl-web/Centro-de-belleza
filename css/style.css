@@ -759,6 +759,10 @@ img { max-width: 100%; height: auto; display: block; }
   .giftcard-cards { grid-template-columns: 1fr; }
   .about-stats { flex-wrap: wrap; gap: 24px; }
   .scroll-indicator { display: none; }
+  /* Hero en móvil: cover para todos los slides, sin barras negras */
+  .hero-slide img { object-fit: cover !important; object-position: center; }
+  .hero-slide--warm img { object-position: top center !important; }
+  .hero-slide--cover-bottom img { object-position: center 50% !important; }
 }
 
 @media (max-width: 600px) {
