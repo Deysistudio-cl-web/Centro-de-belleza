@@ -108,48 +108,69 @@
   </div>
 </header>
 
-<!-- HERO CAROUSEL CSS-only auto-play -->
+<!-- HERO CAROUSEL -->
 <section class="hero" aria-label="Portada">
   <div class="carousel-track">
-    <div class="hero-slide">
-      <img src="img/hero-salon-fondo-w1920.jpg" alt="Salón Deysi Studio" loading="eager">
+    <div class="hero-slide hero-slide--warm">
+      <img src="img/hero-portada-1-rubio.jpg" alt="Coloración rubia Deysi Studio" loading="eager">
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="eyebrow">Bienvenida al Studio</span>
-          <h1>Vive la Experiencia<br><em>Deysi Studio</em></h1>
-          <p>Transformamos tu imagen con los mejores especialistas en belleza</p>
-          <a href="https://cal.com/deysi-studio" class="btn btn-outline" target="_blank" rel="noopener">Agenda tu Cita</a>
+          <span class="eyebrow">Coloración Profesional</span>
+          <h1>Los rubios<br><em>nunca</em> pasan<br>de moda.</h1>
+          <p>Reserva tu transformación dorada<br>con nuestras especialistas en color.</p>
+          <a href="https://cal.com/deysi-studio" class="btn btn-dark-gold" target="_blank" rel="noopener">Agenda tu Hora &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide hero-slide--cover-bottom">
+      <img src="img/hero-portada-2-liso.jpg" alt="Alisado permanente Deysi Studio" loading="lazy">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="eyebrow">Alisado Permanente &middot; Promo</span>
+          <h1>Cabello liso,<br><em>perfectamente</em><br>tuyo.</h1>
+          <p>Transforma tu melena con alisado profesional.<br>El resultado que siempre soñaste.</p>
+          <a href="servicios/alisados-permanentes.html" class="btn btn-outline">Ver Promoción &rarr;</a>
         </div>
       </div>
     </div>
     <div class="hero-slide">
-      <img src="img/servicios-coloracion-balayage-w1920.jpg" alt="Extensiones y coloración" loading="lazy">
+      <img src="img/hero-portada-3-estilo.jpg" alt="Peinados y estilo Deysi Studio" loading="lazy">
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="eyebrow">Especialistas en Cabello</span>
-          <h1>Extensiones &amp;<br><em>Coloración Premium</em></h1>
-          <p>Las técnicas más modernas en un ambiente exclusivo</p>
-          <a href="servicios/extensiones-cabello.html" class="btn btn-outline">Conoce más</a>
+          <span class="eyebrow">Peinados &amp; Estilo</span>
+          <h1>Tu mejor<br><em>versión,</em><br>cada día.</h1>
+          <p>Cortes, peinados y tratamientos diseñados<br>para realzar tu estilo único.</p>
+          <a href="servicios/index.html" class="btn btn-outline">Ver Servicios &rarr;</a>
         </div>
       </div>
     </div>
-    <div class="hero-slide">
-      <img src="img/novia-peinado-maquillaje-w1920.jpg" alt="Novias y eventos" loading="lazy">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="eyebrow">Novias &amp; Eventos</span>
-          <h1>Tu Momento<br><em>Más Especial</em></h1>
-          <p>Peinados y maquillajes para bodas, fiestas y eventos especiales</p>
-          <a href="servicios/peinados-maquillajes.html" class="btn btn-outline">Ver Servicios</a>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="carousel-dots">
+    <button class="carousel-dot active" aria-label="Foto 1"></button>
+    <button class="carousel-dot" aria-label="Foto 2"></button>
+    <button class="carousel-dot" aria-label="Foto 3"></button>
   </div>
   <div class="scroll-indicator">
     <span class="scroll-line"></span>
     <span>Scroll</span>
   </div>
 </section>
+<script>
+(function(){
+  var hero=document.querySelector('.hero'),track=document.querySelector('.carousel-track'),dots=document.querySelectorAll('.carousel-dot');
+  if(!hero||!track||!dots.length)return;
+  hero.classList.add('js-carousel');
+  var cur=0,total=3,timer;
+  function slideTo(n){
+    cur=((n%total)+total)%total;
+    track.style.transform='translateX(-'+(cur*33.333)+'%)';
+    dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
+  }
+  function startAuto(){clearInterval(timer);timer=setInterval(function(){slideTo(cur+1);},5000);}
+  dots.forEach(function(dot,i){dot.addEventListener('click',function(){slideTo(i);startAuto();});});
+  slideTo(0);startAuto();
+}());
+</script>
 
 <!-- ABOUT -->
 <section class="about" id="nosotras">
