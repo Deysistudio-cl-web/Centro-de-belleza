@@ -18,8 +18,8 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 130px; }
-body { font-family: var(--font-sans); color: var(--text-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+html { scroll-behavior: smooth; scroll-padding-top: 130px; overflow-x: hidden; max-width: 100%; }
+body { font-family: var(--font-sans); color: var(--text-dark); background: var(--white); overflow-x: hidden; line-height: 1.6; max-width: 100%; }
 
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); font-weight: 400; line-height: 1.2; }
 h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); }
