@@ -215,7 +215,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* =========================================
    HERO (CSS auto-carousel)
 ========================================= */
-.hero { position: relative; margin-top: 168px; height: calc(100vh - 168px); min-height: 432px; overflow: hidden; background: #111; touch-action: pan-y; }
+.hero { position: relative; margin-top: 168px; height: calc(100vh - 168px); min-height: 432px; overflow: hidden; contain: paint; background: #111; touch-action: pan-y; }
 
 .carousel-track {
   display: flex; width: 300%; height: 100%;

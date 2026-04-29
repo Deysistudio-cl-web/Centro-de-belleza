@@ -159,18 +159,34 @@
 </section>
 <script>
 (function(){
+  /* ── Carrusel ── */
   var hero=document.querySelector('.hero'),track=document.querySelector('.carousel-track'),dots=document.querySelectorAll('.carousel-dot');
-  if(!hero||!track||!dots.length)return;
-  hero.classList.add('js-carousel');
-  var cur=0,total=3,timer;
-  function slideTo(n){
-    cur=((n%total)+total)%total;
-    track.style.transform='translateX(-'+(cur*33.333)+'%)';
-    dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
+  if(hero&&track&&dots.length){
+    hero.classList.add('js-carousel');
+    var cur=0,total=3,timer;
+    function slideTo(n){
+      cur=((n%total)+total)%total;
+      track.style.transform='translateX(-'+(cur*33.333)+'%)';
+      dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
+    }
+    function startAuto(){clearInterval(timer);timer=setInterval(function(){slideTo(cur+1);},5000);}
+    dots.forEach(function(dot,i){dot.addEventListener('click',function(){slideTo(i);startAuto();});});
+    slideTo(0);startAuto();
   }
-  function startAuto(){clearInterval(timer);timer=setInterval(function(){slideTo(cur+1);},5000);}
-  dots.forEach(function(dot,i){dot.addEventListener('click',function(){slideTo(i);startAuto();});});
-  slideTo(0);startAuto();
+
+  /* ── Bloquear scroll horizontal y pinch-zoom en toda la página ── */
+  var sx=0,sy=0;
+  document.addEventListener('gesturestart',function(e){e.preventDefault();},{passive:false});
+  document.addEventListener('gesturechange',function(e){e.preventDefault();},{passive:false});
+  document.addEventListener('touchstart',function(e){
+    sx=e.touches[0].pageX; sy=e.touches[0].pageY;
+  },{passive:true});
+  document.addEventListener('touchmove',function(e){
+    if(e.touches.length>1){e.preventDefault();return;}
+    var dx=Math.abs(e.touches[0].pageX-sx);
+    var dy=Math.abs(e.touches[0].pageY-sy);
+    if(dx>dy&&dx>6){e.preventDefault();}
+  },{passive:false});
 }());
 </script>
 
