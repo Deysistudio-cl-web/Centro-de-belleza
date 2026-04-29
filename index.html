@@ -171,20 +171,38 @@
     }
     function startAuto(){clearInterval(timer);timer=setInterval(function(){slideTo(cur+1);},5000);}
     dots.forEach(function(dot,i){dot.addEventListener('click',function(){slideTo(i);startAuto();});});
+
+    /* ── Swipe en carrusel ── */
+    var hsx=0,hsy=0,swiping=false;
+    hero.addEventListener('touchstart',function(e){
+      hsx=e.touches[0].pageX; hsy=e.touches[0].pageY; swiping=false;
+    },{passive:true});
+    hero.addEventListener('touchmove',function(e){
+      var dx=Math.abs(e.touches[0].pageX-hsx),dy=Math.abs(e.touches[0].pageY-hsy);
+      if(dx>dy&&dx>6){e.preventDefault();swiping=true;}
+    },{passive:false});
+    hero.addEventListener('touchend',function(e){
+      if(!swiping)return;
+      var dx=e.changedTouches[0].pageX-hsx;
+      if(Math.abs(dx)>45){dx<0?slideTo(cur+1):slideTo(cur-1);startAuto();}
+      swiping=false;
+    },{passive:true});
+
     slideTo(0);startAuto();
   }
 
-  /* ── Bloquear scroll horizontal y pinch-zoom en toda la página ── */
-  var sx=0,sy=0;
+  /* ── Bloquear scroll horizontal y pinch-zoom fuera del carrusel ── */
+  var sx=0,sy=0,onHero=false;
   document.addEventListener('gesturestart',function(e){e.preventDefault();},{passive:false});
   document.addEventListener('gesturechange',function(e){e.preventDefault();},{passive:false});
   document.addEventListener('touchstart',function(e){
     sx=e.touches[0].pageX; sy=e.touches[0].pageY;
+    onHero=hero&&hero.contains(e.target);
   },{passive:true});
   document.addEventListener('touchmove',function(e){
     if(e.touches.length>1){e.preventDefault();return;}
-    var dx=Math.abs(e.touches[0].pageX-sx);
-    var dy=Math.abs(e.touches[0].pageY-sy);
+    if(onHero)return;
+    var dx=Math.abs(e.touches[0].pageX-sx),dy=Math.abs(e.touches[0].pageY-sy);
     if(dx>dy&&dx>6){e.preventDefault();}
   },{passive:false});
 }());
