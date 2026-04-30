@@ -249,7 +249,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Slide 1: warm — golden overlay, dark brown text (como propuesta original) */
 .hero-slide--warm .hero-overlay {
-  background: linear-gradient(to right, rgba(120,80,20,0.88) 0%, rgba(185,135,45,0.62) 45%, rgba(210,170,50,0.15) 75%, transparent 100%);
+  background: linear-gradient(to right, rgba(120,80,20,0.52) 0%, rgba(185,135,45,0.28) 50%, rgba(210,170,50,0.06) 78%, transparent 100%);
 }
 .hero-slide--warm .hero-content .eyebrow { color: #5a3f15; }
 .hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: 0 1px 6px rgba(255,230,130,0.35); }
