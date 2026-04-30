@@ -778,15 +778,13 @@ img { max-width: 100%; height: auto; display: block; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .map-container { height: 280px; }
-  .hero { margin-top: 150px; height: clamp(260px, 62vw, 420px); min-height: 260px; }
+  .hero { margin-top: 150px; height: clamp(300px, 72vw, 460px); min-height: 300px; }
   .hero-content { padding: 0 20px; max-width: 72%; }
   .hero-content .eyebrow { font-size: 0.6rem; margin-bottom: 8px; }
-  .hero-content h1 { font-size: 1.3rem; margin-bottom: 10px; }
+  .hero-content h1 { font-size: 1.6rem; margin-bottom: 14px; }
   .hero-content p { font-size: 0.82rem; line-height: 1.5; margin-bottom: 14px; }
   .hero-content .btn { padding: 9px 20px; font-size: 0.68rem; }
-  .hero-slide--warm .hero-content h1 { margin-bottom: 32px !important; }
-  .hero-slide--warm .hero-content p { margin-top: 0 !important; }
-  .hero-slide--cover-bottom img { object-position: 15% 50% !important; }
+  .hero-slide--cover-bottom img { object-position: 70% 50% !important; }
   .services-list-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .promos-grid { grid-template-columns: 1fr; }
