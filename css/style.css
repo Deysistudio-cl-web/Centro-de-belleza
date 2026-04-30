@@ -555,6 +555,136 @@ img { max-width: 100%; height: auto; display: block; }
 .promo-price small { font-size: 1rem; color: var(--text-medium); text-decoration: line-through; margin-left: 8px; }
 
 /* =========================================
+   SERVICE PAGES — veranvior format
+========================================= */
+.sv-hero { display: grid; grid-template-columns: 1fr 1fr; margin-top: 168px; min-height: 620px; }
+.sv-hero__img { overflow: hidden; position: relative; }
+.sv-hero__img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.sv-hero__text { display: flex; flex-direction: column; justify-content: center; padding: 80px 72px; background: var(--cream); }
+.sv-hero__tag { display: inline-block; font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.sv-hero__text h1 { font-family: var(--font-serif); font-size: clamp(2rem, 3.2vw, 3.4rem); color: var(--black); font-weight: 400; font-style: italic; line-height: 1.1; margin-bottom: 20px; }
+.sv-hero__desc { font-size: 1rem; line-height: 1.8; color: var(--text-medium); margin-bottom: 28px; max-width: 440px; }
+.sv-hero__toc { list-style: none; padding: 0; margin: 0 0 32px; border-top: 1px solid rgba(184,150,90,0.2); }
+.sv-hero__toc li { border-bottom: 1px solid rgba(184,150,90,0.2); }
+.sv-hero__toc li a { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--black); transition: color 0.2s; }
+.sv-hero__toc li a:hover { color: var(--gold); }
+.sv-hero__toc li a::after { content: '›'; font-size: 1.2rem; color: var(--gold); }
+.sv-hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.sv-tagline { background: var(--gold); padding: 32px 0; text-align: center; }
+.sv-tagline p { font-family: var(--font-serif); font-size: clamp(1.2rem, 2.2vw, 1.9rem); color: #fff; font-style: italic; font-weight: 400; line-height: 1.4; margin: 0; padding: 0 24px; }
+
+.sv-cta-band { padding: 100px 0; background: var(--light-beige); text-align: center; }
+.sv-cta-band h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.2vw, 3rem); color: var(--black); font-weight: 400; font-style: italic; margin-bottom: 16px; }
+.sv-cta-band p { max-width: 520px; margin: 0 auto 36px; font-size: 1rem; color: var(--text-medium); }
+.sv-cta-band__btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.sv-benefits { display: grid; grid-template-columns: 1fr 1fr; }
+.sv-benefits__text { background: var(--black); padding: 80px 72px; display: flex; flex-direction: column; justify-content: center; }
+.sv-benefits__text .eyebrow { color: var(--gold); margin-bottom: 20px; }
+.sv-benefits__text h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 2.6vw, 2.6rem); color: #fff; font-weight: 400; margin-bottom: 40px; line-height: 1.2; }
+.sv-benefit-item { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 32px; }
+.sv-benefit-item:last-of-type { margin-bottom: 0; }
+.sv-benefit-item__icon { width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; background: rgba(184,150,90,0.15); border: 1px solid rgba(184,150,90,0.4); display: flex; align-items: center; justify-content: center; }
+.sv-benefit-item__icon svg { width: 22px; height: 22px; }
+.sv-benefit-item__body h4 { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
+.sv-benefit-item__body p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0; }
+.sv-benefits__img { overflow: hidden; position: relative; min-height: 480px; }
+.sv-benefits__img img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+.sv-gallery { padding: 80px 0; background: var(--white); }
+.sv-gallery .section-header { margin-bottom: 40px; }
+.sv-gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-bottom: 40px; overflow: hidden; }
+.sv-gallery__grid img { width: 100%; height: 300px; object-fit: cover; object-position: center top; display: block; transition: transform 0.4s ease; }
+.sv-gallery__grid img:hover { transform: scale(1.04); }
+.sv-gallery .reviews-cta { text-align: center; }
+
+@media (max-width: 900px) {
+  .sv-hero { grid-template-columns: 1fr; margin-top: 150px; }
+  .sv-hero__img { min-height: 380px; }
+  .sv-hero__text { padding: 52px 40px; }
+  .sv-benefits { grid-template-columns: 1fr; }
+  .sv-benefits__text { padding: 60px 40px; order: 2; }
+  .sv-benefits__img { min-height: 360px; order: 1; }
+  .sv-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .sv-gallery__grid img { height: 240px; }
+}
+@media (max-width: 600px) {
+  .sv-hero__text { padding: 44px 20px; }
+  .sv-hero__desc { max-width: 100%; }
+  .sv-cta-band { padding: 64px 0; }
+  .sv-benefits__text { padding: 52px 20px; }
+  .sv-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .sv-gallery__grid img { height: 180px; }
+}
+
+/* =========================================
+   PROMOTIONS — SPLIT LAYOUT (new)
+========================================= */
+.promo-hero-img {
+  position: relative; width: 100%; height: clamp(280px, 38vw, 520px);
+  overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center;
+  margin-top: 168px;
+}
+.promo-hero-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
+.promo-hero-img::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.58); }
+.promo-hero-img__content { position: relative; z-index: 1; padding: 0 24px; }
+.promo-hero-img__content p { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.promo-hero-img__content h1 { font-family: var(--font-serif); font-size: clamp(2.2rem, 5vw, 4rem); color: #fff; font-weight: 400; font-style: italic; line-height: 1.1; }
+
+.promo-anchor-nav { background: var(--black); position: sticky; top: 168px; z-index: 100; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.promo-anchor-nav::-webkit-scrollbar { display: none; }
+.promo-anchor-nav__inner { display: flex; align-items: center; padding: 0 32px; min-width: max-content; }
+.promo-anchor-nav a { display: block; padding: 16px 24px; font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; text-decoration: none; }
+.promo-anchor-nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+.promo-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+.promo-split--reverse { direction: rtl; }
+.promo-split--reverse > * { direction: ltr; }
+.promo-split__img { overflow: hidden; }
+.promo-split__img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.promo-split__text { display: flex; flex-direction: column; justify-content: center; padding: 72px 80px; background: var(--white); }
+.promo-split--cream .promo-split__text { background: var(--light-beige); }
+.promo-split__tag { display: inline-block; font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.promo-split__text h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 2.6vw, 2.4rem); color: var(--black); font-weight: 400; margin-bottom: 20px; line-height: 1.2; }
+.promo-split__text p { font-size: 1rem; line-height: 1.8; color: var(--text-medium); margin-bottom: 12px; }
+.promo-split__subhead { font-family: var(--font-serif); font-size: 1.2rem; color: var(--black); margin: 20px 0 10px; }
+.promo-split__list { list-style: none; padding: 0; margin: 0 0 18px; }
+.promo-split__list li { padding: 6px 0; font-size: 0.92rem; color: var(--text-medium); display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(184,150,90,0.15); }
+.promo-split__list li::before { content: '›'; color: var(--gold); font-size: 1.3rem; flex-shrink: 0; }
+.promo-split__price { font-family: var(--font-serif); font-size: 2.2rem; color: var(--gold); margin: 4px 0 24px; }
+
+.promo-gradient-banner { background: linear-gradient(135deg, rgba(184,150,90,0.14) 0%, rgba(245,239,230,0.6) 50%, rgba(232,213,176,0.25) 100%); padding: 96px 0; text-align: center; border-top: 1px solid rgba(184,150,90,0.2); border-bottom: 1px solid rgba(184,150,90,0.2); }
+.promo-gradient-banner h2 { font-family: var(--font-sans); font-size: clamp(1.6rem, 3.2vw, 2.8rem); font-weight: 700; color: var(--black); letter-spacing: -0.01em; margin-bottom: 14px; line-height: 1.2; }
+.promo-gradient-banner h2 em { color: var(--gold); font-style: normal; }
+.promo-gradient-banner p { font-size: 0.85rem; letter-spacing: 1px; color: var(--text-medium); margin-bottom: 32px; }
+
+.promo-feature-box { background: var(--black); color: #fff; padding: 28px 32px; margin: 24px 0; border-left: 3px solid var(--gold); }
+.promo-feature-box__pct { font-family: var(--font-serif); font-size: 3.2rem; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
+.promo-feature-box__label { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+.promo-terms-note { text-align: center; padding: 24px 0 60px; font-size: 0.78rem; color: var(--text-medium); letter-spacing: 0.5px; }
+.promo-terms-note a { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .promo-hero-img { margin-top: 150px; }
+  .promo-anchor-nav { top: 150px; }
+  .promo-split { grid-template-columns: 1fr; min-height: auto; }
+  .promo-split--reverse { direction: ltr; }
+  .promo-split__text { padding: 52px 40px; }
+  .promo-split__img { min-height: 320px; }
+  .promo-gradient-banner { padding: 72px 0; }
+}
+@media (max-width: 600px) {
+  .promo-hero-img { height: clamp(220px, 60vw, 340px); }
+  .promo-anchor-nav { top: 150px; }
+  .promo-split__text { padding: 44px 20px; }
+  .promo-split__img { min-height: 260px; }
+  .promo-gradient-banner { padding: 56px 0; }
+  .promo-feature-box { padding: 20px; }
+}
+
+/* =========================================
    GIFT CARD STORE
 ========================================= */
 
