@@ -777,7 +777,7 @@ img { max-width: 100%; height: auto; display: block; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .map-container { height: 280px; }
-  .hero { margin-top: 60px; height: clamp(260px, 62vw, 420px); min-height: 260px; }
+  .hero { margin-top: 150px; height: clamp(260px, 62vw, 420px); min-height: 260px; }
   .hero-content h1 { font-size: 1.75rem; }
   .hero-content { padding: 0 22px; max-width: 75%; }
   .services-list-grid { grid-template-columns: 1fr; }
