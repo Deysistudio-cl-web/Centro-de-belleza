@@ -29,7 +29,7 @@
     }
     .rv-track-v .review-card { flex: 0 0 290px; width: 290px; }
     @media (max-width: 768px) {
-      .reviews-intro-2col { grid-template-columns: 1fr !important; gap: 32px !important; opacity: 1 !important; transform: none !important; }
+      .reviews-intro-2col { display: flex !important; flex-direction: column !important; gap: 32px !important; }
       .reviews-intro-2col > div:first-child { order: 1; }
       .reviews-intro-2col > div:last-child  { order: 2; }
       .maps-float { display: none !important; }
@@ -388,7 +388,7 @@
 <!-- GOOGLE REVIEWS -->
 <section class="reviews-section">
   <div class="container">
-    <div class="fade-in reviews-intro-2col" style="display:grid;grid-template-columns:minmax(294px, 1fr) 2fr;gap:64px;align-items:center;margin-bottom:64px;">
+    <div class="reviews-intro-2col" style="display:grid;grid-template-columns:minmax(294px, 1fr) 2fr;gap:64px;align-items:center;margin-bottom:64px;">
 
       <!-- Foto apilada estilo Google Maps -->
       <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
