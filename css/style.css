@@ -784,6 +784,7 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-content h1 { font-size: 1.6rem; margin-bottom: 14px; }
   .hero-content p { font-size: 0.82rem; line-height: 1.5; margin-bottom: 14px; }
   .hero-content .btn { padding: 9px 20px; font-size: 0.68rem; }
+  .hero-slide--warm .hero-content { max-width: 50%; }
   .hero-slide--warm .hero-content p { margin-top: 28px !important; }
   .hero-slide--warm img { transform: scale(1.35); transform-origin: 50% 0%; }
   .hero-slide--cover-bottom img { object-position: 15% 50% !important; }
