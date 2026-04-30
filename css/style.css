@@ -251,9 +251,9 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-slide--warm .hero-overlay {
   background: linear-gradient(to right, rgba(120,80,20,0.52) 0%, rgba(185,135,45,0.28) 50%, rgba(210,170,50,0.06) 78%, transparent 100%);
 }
-.hero-slide--warm .hero-content .eyebrow { color: #5a3f15; }
-.hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: 0 1px 6px rgba(255,230,130,0.35); }
-.hero-slide--warm .hero-content p { color: #4a3418; }
+.hero-slide--warm .hero-content .eyebrow { color: #f5d98a; }
+.hero-slide--warm .hero-content h1 { color: #fff; text-shadow: 0 2px 16px rgba(80,40,0,0.65); }
+.hero-slide--warm .hero-content p { color: rgba(255,248,220,0.96); text-shadow: 0 1px 8px rgba(60,30,0,0.5); }
 .btn-dark-gold { background: #2c1810; color: #f5d98a; border: none; }
 .btn-dark-gold:hover { background: #5a3f15; color: #f5d98a; }
 
