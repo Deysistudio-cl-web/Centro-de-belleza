@@ -247,11 +247,13 @@ img { max-width: 100%; height: auto; display: block; }
 /* Slide 2: cover full screen, un poco arriba del fondo para ver la mirada */
 .hero-slide--cover-bottom img { object-fit: cover; object-position: center 50%; }
 
-/* Slide 1: warm — white text on dark overlay, gold accent */
+/* Slide 1: warm — golden overlay, dark brown text (como propuesta original) */
 .hero-slide--warm .hero-overlay {
-  background: linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.18) 60%, transparent 100%);
+  background: linear-gradient(to right, rgba(120,80,20,0.88) 0%, rgba(185,135,45,0.62) 45%, rgba(210,170,50,0.15) 75%, transparent 100%);
 }
-.hero-slide--warm .hero-content .eyebrow { color: var(--light-gold); }
+.hero-slide--warm .hero-content .eyebrow { color: #5a3f15; }
+.hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: 0 1px 6px rgba(255,230,130,0.35); }
+.hero-slide--warm .hero-content p { color: #4a3418; }
 .btn-dark-gold { background: #2c1810; color: #f5d98a; border: none; }
 .btn-dark-gold:hover { background: #5a3f15; color: #f5d98a; }
 
