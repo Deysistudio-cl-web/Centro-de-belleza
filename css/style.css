@@ -581,7 +581,7 @@ img { max-width: 100%; height: auto; display: block; }
   top: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, transparent, #c9a84c, transparent);
 }
-.gc-logo-top { width: 55%; max-width: 280px; min-width: 60px; height: auto; object-fit: contain; }
+.gc-logo-top { width: 55%; max-width: 280px; min-width: 60px; height: auto; object-fit: contain; margin-bottom: 1em; }
 .gc-title-block { text-align: center; line-height: 1; }
 .gc-title-gift { font-family: 'Great Vibes', cursive; font-size: 2.2em; color: #c9a84c; display: block; line-height: 1; margin-bottom: -0.05em; }
 .gc-title-card { font-family: var(--font-sans); font-size: 1.5em; font-weight: 700; letter-spacing: 0.3em; color: white; display: block; text-transform: uppercase; }
