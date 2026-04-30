@@ -252,8 +252,8 @@ img { max-width: 100%; height: auto; display: block; }
   background: linear-gradient(to right, rgba(120,80,20,0.52) 0%, rgba(185,135,45,0.28) 50%, rgba(210,170,50,0.06) 78%, transparent 100%);
 }
 .hero-slide--warm .hero-content .eyebrow { color: #f5d98a; }
-.hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: 0 0 24px rgba(245,217,138,0.9), 0 0 48px rgba(245,200,80,0.5); }
-.hero-slide--warm .hero-content p { color: #3d2008; text-shadow: 0 0 16px rgba(245,217,138,0.8); }
+.hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: none; }
+.hero-slide--warm .hero-content p { color: #3d2008; text-shadow: none; }
 .btn-dark-gold { background: #2c1810; color: #f5d98a; border: none; }
 .btn-dark-gold:hover { background: #5a3f15; color: #f5d98a; }
 
