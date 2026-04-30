@@ -778,8 +778,12 @@ img { max-width: 100%; height: auto; display: block; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .map-container { height: 280px; }
   .hero { margin-top: 150px; height: clamp(260px, 62vw, 420px); min-height: 260px; }
-  .hero-content h1 { font-size: 1.75rem; }
-  .hero-content { padding: 0 22px; max-width: 75%; }
+  .hero-content { padding: 0 20px; max-width: 72%; }
+  .hero-content .eyebrow { font-size: 0.6rem; margin-bottom: 8px; }
+  .hero-content h1 { font-size: 1.3rem; margin-bottom: 10px; }
+  .hero-content p { font-size: 0.82rem; line-height: 1.5; margin-bottom: 14px; }
+  .hero-content .btn { padding: 9px 20px; font-size: 0.68rem; }
+  .hero-slide--cover-bottom img { object-position: 62% 50% !important; }
   .services-list-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .promos-grid { grid-template-columns: 1fr; }
