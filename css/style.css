@@ -238,7 +238,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-content { padding: 0 80px; max-width: 680px; color: var(--white); }
 .hero-content .eyebrow { color: var(--light-gold); margin-bottom: 16px; }
-.hero-content h1 { font-style: italic; font-weight: 300; color: var(--white); margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.hero-content h1 { font-style: italic; font-weight: 300; color: var(--white); margin-bottom: 20px; }
 .hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.88); margin-bottom: 36px; font-weight: 300; }
 
 /* Slide 1: cover full screen, hair at very top edge, reveal more below */
@@ -252,8 +252,8 @@ img { max-width: 100%; height: auto; display: block; }
   background: linear-gradient(to right, rgba(120,80,20,0.52) 0%, rgba(185,135,45,0.28) 50%, rgba(210,170,50,0.06) 78%, transparent 100%);
 }
 .hero-slide--warm .hero-content .eyebrow { color: #f5d98a; }
-.hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: none; }
-.hero-slide--warm .hero-content p { color: #3d2008; text-shadow: none; }
+.hero-slide--warm .hero-content h1 { color: #2c1810; text-shadow: none !important; }
+.hero-slide--warm .hero-content p { color: #3d2008; text-shadow: none !important; }
 .btn-dark-gold { background: #2c1810; color: #f5d98a; border: none; }
 .btn-dark-gold:hover { background: #5a3f15; color: #f5d98a; }
 
