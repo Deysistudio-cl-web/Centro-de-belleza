@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Portafolio — Deysi Studio</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="img/logo_512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/logo_192x192.png">
+  <link rel="apple-touch-icon" href="img/logo_192x192.png">
+  <meta name="description" content="Galería de trabajos de Deysi Studio. Balayage, balayage, coloración, maquillaje y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <style>
+    .filter-bar { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:48px; }
+    .filter-btn { padding:8px 22px; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border:1px solid rgba(184,150,90,0.4); background:transparent; color:var(--text-dark); cursor:pointer; transition:var(--transition); }
+    .filter-btn.active, .filter-btn:hover { background:var(--gold); color:white; border-color:var(--gold); }
+  </style>
+</head>
+<body>
+
+<a href="https://wa.me/56966033023" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="nav-mobile-overlay" id="nav-overlay" style="display:none;"></div>
+<nav class="nav-mobile" id="mobile-nav">
+  <button class="nav-mobile-close" id="nav-close" aria-label="Cerrar">&#215;</button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios/index.html">Servicios</a></li>
+    <li><a href="promociones.html">Promociones</a></li>
+    <li><a href="portafolio.html">Portafolio</a></li>
+    <li><a href="nosotras.html">Nosotras</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<header class="header" id="header">
+  <div class="header-brand-row">
+    <div class="header-socials">
+      <a href="https://www.instagram.com/deysistudio.cl" class="header-social-link header-social-ig" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" class="header-social-link header-social-fb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://wa.me/56966033023" class="header-social-link header-social-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <a href="index.html" class="header-social-link header-social-web" aria-label="Sitio web"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></a>
+    </div>
+    <div class="header-brand-center">
+      <a href="index.html" class="header-logo"><img src="img/logo_512x512.png" alt="Deysi Studio"></a>
+    </div>
+    <div class="header-brand-right">
+      <div class="header-search">
+        <input type="search" class="header-search-input" id="header-search-input" placeholder="Buscar servicios..." autocomplete="off">
+        <button type="button" class="header-search-btn" id="header-search-btn" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <div class="header-search-results" id="header-search-results"></div>
+      </div>
+      <a href="https://cal.com/deysi-studio" class="btn btn-primary btn-reservar" target="_blank" rel="noopener">Reservar</a>
+    </div>
+  </div>
+  <div class="header-nav-row">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="servicios/index.html">Servicios &#9660;</a>
+          <ul class="dropdown">
+            <li><a href="servicios/extensiones-cabello.html">fghft de Cabello</a></li>
+            <li><a href="servicios/balayage-babylights.html">Balayage &amp; Babylights</a></li>
+            <li><a href="servicios/coloracion.html">Coloración</a></li>
+            <li><a href="servicios/brushing.html">Brushing</a></li>
+            <li><a href="servicios/peinados-maquillajes.html">Peinados y Maquillajes</a></li>
+            <li><a href="servicios/index.html">Ver todos →</a></li>
+          </ul>
+        </li>
+        <li><a href="promociones.html">Promociones</a></li>
+        <li><a href="portafolio.html" class="active">Portafolio</a></li>
+        <li><a href="nosotras.html">Nosotras</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gift-card.html">Gift Card</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Men&uacute;"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Nuestros Trabajos</span>
+    <h1>Portafolio</h1>
+    <p>Cada imagen cuenta una historia de transformación y belleza</p>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> <span>/</span> <span>Portafolio</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 0;">
+  <div class="container">
+    <div class="filter-bar fade-in">
+      <button class="filter-btn active">Todos</button>
+      <button class="filter-btn">Extenciones</button>
+      <button class="filter-btn">Coloración</button>
+      <button class="filter-btn">Balayage</button>
+      <button class="filter-btn">Peinados</button>
+    </div>
+    <div class="portfolio-full-grid">
+      <div class="portfolio-item"><img src="img/portafolio-001-w600.jpg" alt="gerg de Cabello" loading="lazy"><div class="portfolio-item-overlay"><span>ooo</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-002-w600.jpg" alt="sdsfsd Premium" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-003-w600.jpg" alt="Extensiones Natural" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-004-w600.jpg" alt="Extensiones Largas" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-005-w600.jpg" alt="Extensiones Rubias" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-006-w600.jpg" alt="Extensiones Oscuras" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-007-w600.jpg" alt="Extensiones con Volumen" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-008-w600.jpg" alt="Extensiones Castaño" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-009-w600.jpg" alt="Extensiones Largo" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-010-w600.jpg" alt="Extensiones Claro" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-011-w600.jpg" alt="Coloración Rubia" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-012-w600.jpg" alt="Coloración Completa" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-013-w600.jpg" alt="Coloración Oscura" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-014-w600.jpg" alt="Coloración Vibrante" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-015-w600.jpg" alt="Coloración Castaño" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-016-w600.jpg" alt="Tinte de Raíz" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-017-w600.jpg" alt="Highlights Modernos" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-018-w600.jpg" alt="Color Especial" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-019-w600.jpg" alt="Coloración Premium" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-020-w600.jpg" alt="Balayage Golden" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-021-w600.jpg" alt="Balayage Natural" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-022-w600.jpg" alt="Balayage Rubio" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-023-w600.jpg" alt="Balayage con Mechas" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-024-w600.jpg" alt="Balayage Oscuro" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-025-w600.jpg" alt="Balayage Claro" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-026-w600.jpg" alt="Balayage Degradé" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-027-w600.jpg" alt="Balayage Suave" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-028-w600.jpg" alt="Balayage Moderno" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-029-w600.jpg" alt="Balayage Californiano" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-030-w600.jpg" alt="Peinado Elegante" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-031-w600.jpg" alt="Peinado de Novia" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-032-w600.jpg" alt="Peinado con Ondas" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-033-w600.jpg" alt="Peinado Recogido" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-034-w600.jpg" alt="Peinado de Gala" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-035-w600.jpg" alt="Peinado con Trenza" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-036-w600.jpg" alt="Peinado Media Cola" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-037-w600.jpg" alt="Peinado Suelto" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-038-w600.jpg" alt="Maquillaje Profesional" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-039-w600.jpg" alt="Maquillaje de Novia" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-040-w600.jpg" alt="Maquillaje de Gala" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-041-w600.jpg" alt="Extensiones Volumen" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-042-w600.jpg" alt="Extensiones Lisas" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-043-w600.jpg" alt="Extensiones con Color" loading="lazy"><div class="portfolio-item-overlay"><span>Extensiones</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-044-w600.jpg" alt="Balayage Miel" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-045-w600.jpg" alt="Balayage Ceniza" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-046-w600.jpg" alt="Coloración Balayage" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-047-w600.jpg" alt="Coloración Caoba" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-048-w600.jpg" alt="Coloración Chocolate" loading="lazy"><div class="portfolio-item-overlay"><span>Coloración</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-049-w600.jpg" alt="Peinado Brushing" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-050-w600.jpg" alt="Peinado Anti-Frizz" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-051-w600.jpg" alt="Peinado con Rulos" loading="lazy"><div class="portfolio-item-overlay"><span>Peinados</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-052-w600.jpg" alt="Balayage Platino" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-053-w600.jpg" alt="Balayage Bronce" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+      <div class="portfolio-item"><img src="img/portafolio-054-w600.jpg" alt="Balayage Luminoso" loading="lazy"><div class="portfolio-item-overlay"><span>Balayage</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="fade-in">
+      <a href="https://cal.com/deysi-studio" class="btn btn-primary" target="_blank" rel="noopener">Agenda tu Cita</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CIERRE CON LOGO + TEXTO + REDES ============== -->
+<section style="padding:80px 0 72px;background:var(--cream);text-align:center;">
+  <div class="container">
+    <a href="index.html" style="display:block;text-align:center;">
+      <img src="img/logo_512x512.png" alt="Deysi Studio" style="width:300px;height:auto;object-fit:contain;display:block;margin:0 auto 28px;">
+    </a>
+    <p style="max-width:860px;margin:0 auto 32px;font-family:var(--font-serif);font-size:clamp(1rem,1.8vw,1.2rem);font-style:italic;font-weight:300;color:rgba(0,0,0,0.7);line-height:1.8;">
+      Somos un Sal&oacute;n de Belleza con amplia trayectoria y a&ntilde;os de experiencia. Contamos con lo &uacute;ltimo en vanguardia para que te veas y te sientas regia, logrando acaparar todas las miradas. Somos expertas en Coloraci&oacute;n, Balayage y Extensiones de Cabello Natural.
+    </p>
+    <div style="display:flex;justify-content:center;gap:18px;">
+      <a href="https://www.instagram.com/deysistudio.cl" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://wa.me/56966033023" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="https://cal.com/deysi-studio" target="_blank" rel="noopener" aria-label="Reservar cita" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;transition:opacity .2s;" onmouseover="this.style.opacity='.72'" onmouseout="this.style.opacity='1'">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo-dark-w512.png" alt="Deysi Studio">
+        <p>Studio de belleza premium especializado en extensiones, coloración y más.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/deysistudio.cl" target="_blank" rel="noopener" aria-label="Instagram">IG</a><a href="https://www.facebook.com/share/14eNeRhDkPC/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="servicios/index.html">Servicios</a></li><li><a href="portafolio.html">Portafolio</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="servicios/extensiones-cabello.html">Extensiones</a></li><li><a href="servicios/balayage-babylights.html">Balayage</a></li><li><a href="servicios/index.html">Ver todos →</a></li></ul></div>
+      <div class="footer-col footer-contact"><h4>Contacto</h4><p>&#128205; Av. Alberto Einstein 719 · Rancagua</p><p>&#128222; <a href="https://wa.me/56966033023" style="color:rgba(255,255,255,0.55)">+56 9 6603 3023</a></p><p style="margin-top:10px;">&#128336; Lun &ndash; S&aacute;b &nbsp;&middot;&nbsp; 9:00 &ndash; 19:00 hrs</p><p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:2px;">Previa cita &nbsp;&middot;&nbsp; Domingos cerrado</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Deysi Studio. Todos los derechos reservados.</p>
+      <div class="footer-bottom-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
